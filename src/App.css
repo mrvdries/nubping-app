@@ -53,7 +53,7 @@
   from {
     -webkit-transform: perspective(350px) rotateX(180deg);
     -o-transform: perspective(350px) rotateX(180deg);
-    transform: perspective(350px) rotateX(180deg);
+    transform: perspective(350px) rotateX(180deg) translate(0, -0.6vh);
     -webkit-transition:0.2s linear 0s;
     -o-transition:0.2s linear 0s;
     transition:0.2s linear 0s;
