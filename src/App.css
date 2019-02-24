@@ -1,10 +1,13 @@
 :root {
   --title-height: 10vh;
-  --title-animation-diff: 20px;
-  --title-animation-time: 1s;
+  --title-animation-diff: 2.4vh;
+  --title-animation-time: 1.5s;
 
-  --color01: #00b68e;
-  --color02: white;
+  --color01: #4B69C3;
+  --color02: rgb(245, 249, 255);
+  --color03: #3941AC;
+  --color04: #FFEB3B;
+  --color05: #40BF59;
 }
 
 .App {
@@ -27,12 +30,12 @@
 }
 
 .title-flip-down {
-  animation: TitleFlipDown var(--title-animation-time) linear forwards;
+  animation: TitleFlipDown var(--title-animation-time) cubic-bezier(.75,-0.5,0,1.75) forwards;
   pointer-events: none;
 }
 
 .title-move-down {
-  animation: TitleMoveDown var(--title-animation-time) linear forwards;
+  animation: TitleMoveDown var(--title-animation-time) cubic-bezier(.75,-0.5,0,1.75) forwards;
   pointer-events: none;
 }
 
