@@ -1,0 +1,95 @@
+@import '../../colors.css';
+
+:root {
+    --title-height: 10vh;
+    --title-animation-diff: 2.4vh;
+    --title-animation-time: 2s;
+}
+
+.title{
+    font-size: var(--title-height);
+}
+
+.title-flip-down {
+    animation: TitleFlipDown var(--title-animation-time) cubic-bezier(.75,-0.5,0,1.75) forwards;
+    pointer-events: none;
+}
+
+.title-move-down {
+    animation: TitleMoveDown var(--title-animation-time) cubic-bezier(.75,-0.5,0,1.75) forwards;
+    pointer-events: none;
+}
+
+.title-move-left {
+    animation: TitleMoveLeft var(--title-animation-time) cubic-bezier(.75,-0.2,0,1.75) forwards;
+    pointer-events: none;
+}
+
+.no-pad {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    display: inline-block;
+}
+
+@keyframes TitleFlipDown {
+    0% {
+        -webkit-transform: perspective(350px) rotateX(180deg);
+        -o-transform: perspective(350px) rotateX(180deg);
+        transform: perspective(350px) rotateX(180deg) translate(0, -0.6vh);
+        -webkit-transition:0.2s linear 0s;
+        -o-transition:0.2s linear 0s;
+        transition:0.2s linear 0s;
+    }
+    70% {
+        -webkit-transform: perspective(500px) rotateX(0deg) translate(0, var(--title-animation-diff));
+        -o-transform: perspective(500px) rotateX(0deg) translate(0, var(--title-animation-diff));
+        transform: perspective(500px) rotateX(0deg) translate(0, var(--title-animation-diff));  
+    }
+    100% {
+        -webkit-transform: perspective(500px) rotateX(0deg) translate(50vw, var(--title-animation-diff));
+        -o-transform: perspective(500px) rotateX(0deg) translate(50vw, var(--title-animation-diff));
+        transform: perspective(500px) rotateX(0deg) translate(50vw, var(--title-animation-diff));  
+    }
+}
+
+@keyframes TitleMoveDown {
+    0% {
+        -webkit-transform: translate(0, calc((-1)*var(--title-animation-diff)));
+        -o-transform: translate(0, calc((-1)*var(--title-animation-diff)));
+        transform: translate(0, calc((-1)*var(--title-animation-diff)));
+        -webkit-transition:0.2s linear 0s;
+        -o-transition:0.2s linear 0s;
+        transition:0.2s linear 0s;
+    }
+    70% {
+        -webkit-transform: translate(0, var(--title-animation-diff));
+        -o-transform: translate(0, var(--title-animation-diff));
+        transform: translate(0, var(--title-animation-diff));
+    }
+    100% {
+        -webkit-transform: translate(50vw, var(--title-animation-diff));
+        -o-transform: translate(50vw, var(--title-animation-diff));
+        transform: translate(50vw, var(--title-animation-diff));
+    }
+}
+
+@keyframes TitleMoveLeft {
+    0% {
+        -webkit-transform: translate(0, calc((-1)*var(--title-animation-diff)));
+        -o-transform: translate(0, calc((-1)*var(--title-animation-diff)));
+        transform: translate(0, calc((-1)*var(--title-animation-diff)));
+        -webkit-transition:0.2s linear 0s;
+        -o-transition:0.2s linear 0s;
+        transition:0.2s linear 0s;
+    }
+    70% {
+        -webkit-transform: translate(0, calc((-1)*var(--title-animation-diff)));
+        -o-transform: translate(0, calc((-1)*var(--title-animation-diff)));
+        transform: translate(0, calc((-1)*var(--title-animation-diff)));
+    }
+    100% {
+        -webkit-transform: translate(-50vw, calc((-1)*var(--title-animation-diff)));
+        -o-transform: translate(-50vw, calc((-1)*var(--title-animation-diff)));
+        transform: translate(-50vw, calc((-1)*var(--title-animation-diff)));
+    }
+}
