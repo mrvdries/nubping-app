@@ -1,9 +1,14 @@
 @import '../../colors.css';
 
+body{
+    background-color: var(--color01);
+    color: var(--color02);
+}
+
 :root {
     --title-height: 10vh;
     --title-animation-diff: 2.4vh;
-    --title-animation-time: 2s;
+    --title-animation-time: 1.7s;
 }
 
 .title{

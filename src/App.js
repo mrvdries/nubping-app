@@ -9,8 +9,12 @@ import {
 	Switch
 } from "react-router-dom";
 
-import TitleScreen from './Screens/Title/TitleScreen';
-import LoginScreen from './Screens/Login/LoginScreen';
+import TitleScreen from './Components/Title/TitleScreen';
+import LoginScreen from './Components/Login/LoginScreen';
+import RegisterScreen from './Components/Login/RegisterScreen';
+import Dashboard from './Components/Dashboard/Dashboard'
+
+import withAuthentication from './Components/withAuthentication';
 
 import  * as routes from './Routes/routes';
 
@@ -26,6 +30,8 @@ class App extends Component {
               <Switch>
                 <Route path={routes.Title} exact render={() => <TitleScreen/>}/>
                 <Route path={routes.Login} render={() => <LoginScreen/>}/>
+                <Route path={routes.Register} render={() => <RegisterScreen/>}/>
+                <Route path={routes.Dashboard} render={() => <Dashboard/>}/>
               </Switch>
               </div>
             </div>

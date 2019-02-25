@@ -17,7 +17,7 @@ class TitleScreen extends Component {
         // this.props.check();
 		setInterval(() => {
 			this.setState({redirect: true});
-		}, 2000);
+		}, 1700);
     }
     render() {
         const { redirect } = this.state;
